@@ -3,7 +3,6 @@
 
     inputs.forEach((el) => {
       el.value = el.defaultValue;
-      console.log(el);
       el.nextElementSibling.value = el.value;
     });
   }
