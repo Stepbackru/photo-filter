@@ -1,5 +1,6 @@
 import outputChange from './components/outputs.js';
 import reset from './components/reset.js';
+import image from './components/image.js';
 
 window.onload = () => {
   const inputs = [...document.querySelectorAll('.filters label input')];
@@ -10,4 +11,5 @@ window.onload = () => {
   });
 
   bntReset.addEventListener('click', reset);
+  image();
 }
