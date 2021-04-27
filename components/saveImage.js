@@ -4,13 +4,9 @@ const saveImage = (e) => {
   const link = document.createElement('a');
   const inputBlur = document.querySelector('input[name="blur"]').value;
   
-  const originImg = new Image();
-  originImg.src = img.src;
-  originImg.setAttribute('crossOrigin', 'anonymous');
-
-  const coeff = Math.ceil(originImg.height / img.height);
-  canvas.width = originImg.width;
-  canvas.height = originImg.height;
+  const coeff = Math.ceil(img.naturalHeight / img.height);
+  canvas.width = img.naturalWidth;
+  canvas.height = img.naturalHeight;
   const ctx = canvas.getContext('2d');
   ctx.filter = getComputedStyle(img).filter.replace(`blur(${inputBlur}px)`, `blur(${inputBlur*coeff}px)`);
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);

@@ -11,6 +11,7 @@ const image = () => {
   }
   const randomUrl = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay()}/${countImage(count)}.jpg`;
 
+  img.setAttribute('crossorigin', 'anonymous');
   fetch(randomUrl)
     .then(res => res.url)
     .then(url => img.src = `${url}`);
