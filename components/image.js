@@ -10,7 +10,6 @@ const image = () => {
     count++;
   }
   const randomUrl = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay()}/${countImage(count)}.jpg`;
-  img.setAttribute('crossOrigin', 'anonymous');
 
   fetch(randomUrl)
     .then(res => res.url)
