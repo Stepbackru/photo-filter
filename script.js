@@ -19,4 +19,9 @@ window.onload = () => {
   bntNext.addEventListener('click', image);
   fileInput.addEventListener('change', loadImage);
   bntSave.addEventListener('click', saveImage);
+
+  document.querySelector('.fullscreen').addEventListener("click", ()=> {
+    !document.fullscreenElement?document.documentElement.requestFullscreen()
+            :document.exitFullscreen?document.exitFullscreen():0
+  });
 }
